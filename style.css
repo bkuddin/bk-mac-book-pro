@@ -36,14 +36,14 @@ body {
 
 button {
   padding: 8px 15px;
-  background-color: #b7d0c8;
-  border: none;
+  background: none;
+  border: 1px solid #045238;
   font-weight: bold;
   border-radius: 5px;
 }
 
 button:hover {
-  background-color: #95c9b8;
+  background-color: #adc8bf;
 }
 
 .promo input {

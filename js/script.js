@@ -100,8 +100,9 @@ const promoBtn = document.getElementById("promo-btn");
 // use promo code event handal
 document.getElementById("promo-btn").addEventListener("click", function () {
   const promoText = "stevekaku";
-  const inputPromoText = document.getElementById("promo-input").value;
-  if (inputPromoText.toLowerCase() == promoText.toLowerCase()) {
+  const inputPromoText = document.getElementById("promo-input");
+  const inputPromo = inputPromoText.value;
+  if (inputPromo.toLowerCase() == promoText.toLowerCase()) {
     let grandPriceText = document.getElementById("grand-total");
     const totalPrice = grandPriceText.innerText;
     const discountPrice = totalPrice - totalPrice * 0.2;
