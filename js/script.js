@@ -9,6 +9,7 @@ function updatePrice() {
     newBestPrice + plusMemoryCost + plusStorageCost + plusDeleveryCost;
   totalPrice.innerText = Number(totalPrice.innerText);
   totalPrice.innerText = newTotal;
+  grandTotal.innerText = Number(grandTotal.innerText);
   grandTotal.innerText = newTotal;
 }
 
@@ -87,8 +88,24 @@ const totalPrice = document.getElementById("total");
 
 // Bonus Part-----------------------------------
 
-// promo code
+/* Grand Total */
+
 const grandTotal = document.getElementById("grand-total");
+
+/* promo code */
 
 const promoInput = document.getElementById("promo-input");
 const promoBtn = document.getElementById("promo-btn");
+
+// use promo code event handal
+document.getElementById("promo-btn").addEventListener("click", function () {
+  const promoText = "stevekaku";
+  const inputPromoText = document.getElementById("promo-input").value;
+  if (inputPromoText.toLowerCase() == promoText.toLowerCase()) {
+    let grandPriceText = document.getElementById("grand-total");
+    const totalPrice = grandPriceText.innerText;
+    const discountPrice = totalPrice - totalPrice * 0.2;
+    grandPriceText.innerText = discountPrice;
+  }
+  inputPromoText.value = " ";
+});
