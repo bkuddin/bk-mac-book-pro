@@ -9,6 +9,7 @@ function updatePrice() {
     newBestPrice + plusMemoryCost + plusStorageCost + plusDeleveryCost;
   totalPrice.innerText = Number(totalPrice.innerText);
   totalPrice.innerText = newTotal;
+  grandTotal.innerText = newTotal;
 }
 
 /* Memory */
@@ -87,6 +88,7 @@ const totalPrice = document.getElementById("total");
 // Bonus Part-----------------------------------
 
 // promo code
-const grandTotal = document.getElementById("grand-Total");
+const grandTotal = document.getElementById("grand-total");
+
 const promoInput = document.getElementById("promo-input");
 const promoBtn = document.getElementById("promo-btn");
