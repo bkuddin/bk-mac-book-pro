@@ -1,4 +1,4 @@
-// Update Price
+// Update Price Total & Grand Total
 function updatePrice() {
   const plusMemoryCost = Number(exMemoryCost.innerText);
   const plusStorageCost = Number(exStorageCost.innerText);
@@ -78,15 +78,12 @@ chargeDelevery.addEventListener("click", function () {
 
 const bestPrice = document.getElementById("best-price");
 bestPrice.innerText = 1299;
-/* bestPrice.addEventListener("click", function () {
-  bestPrice.innerText = 1299;
-}); */
 
 /* Total Price */
 
 const totalPrice = document.getElementById("total");
 
-// Bonus Part-----------------------------------
+// --------------------Bonus Part-----------------------------------//
 
 /* Grand Total */
 
